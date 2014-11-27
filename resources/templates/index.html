@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Hello, {{ name }}
+{% endblock %}
+
+{% block body %}
+  <div class="row">
+    <div class="span12">
+      <h3>Welcome, {{ name }}</h3>
+      <p>Edit <a href="/user/{{ id }}">profile</a></p>
+      <h3>Courses</h3>
+      {% for c in courses %}
+      <p><a href="/rest/courses/{{ c.id }}">{{ c.name }}</a></p>
+      {% endfor %}
+      <form action="/courses" method="post">
+        <input name="name" />
+        <button type="submit" class="btn btn-primary">Create</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

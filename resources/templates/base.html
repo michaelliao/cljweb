@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}TITLE{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+  <script src="/static/js/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a href="/" class="brand">Clojure Web Project</a>
+          <ul class="nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/rest/courses">Courses</a></li>
+            <li><a href="https://github.com/michaelliao/cljweb">Source</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row" style="height:42px"></div>
+    {% block body %}BODY{% endblock %}
+  </div>
+
+  <div id="footer" class="container">
+    <div class="row">
+      <div class="span12">
+        <hr/>
+        <p>Copyright&copy;2014</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
