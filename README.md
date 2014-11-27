@@ -1,4 +1,4 @@
 cljweb
 ======
 
-A clojure web project for start
+A clojure web project for quick start.
